@@ -81,11 +81,11 @@ public class EmployeeServiceImpl implements EmployeeService {
         employee.setStatus(StatusConstant.ENABLE);
         employee.setPassword(PasswordConstant.DEFAULT_PASSWORD);
         // 设置时间
-        employee.setCreateTime(LocalDateTime.now());
-        employee.setUpdateTime(LocalDateTime.now());
+//        employee.setCreateTime(LocalDateTime.now());
+//        employee.setUpdateTime(LocalDateTime.now());
         // 设置创建记录人
-        employee.setCreateUser(BaseContext.getCurrentId());
-        employee.setUpdateUser(BaseContext.getCurrentId());
+//        employee.setCreateUser(BaseContext.getCurrentId());
+//        employee.setUpdateUser(BaseContext.getCurrentId());
         employeeMapper.insert(employee);
     }
 
@@ -101,7 +101,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         // 返回page
         Page<Employee> employee = employeeMapper.page(employeePageQueryDTO.getName());
         List<Employee> employeeResult = employee.getResult();
-        int a = 0;
         return new PageResult(
                 employee.getTotal(), employeeResult
         );
@@ -133,8 +132,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         // 属性拷贝，源-目标，属性名一致
         BeanUtils.copyProperties(employeeDTO, employee);
         // 设置时间和修改人
-        employee.setUpdateTime(LocalDateTime.now());
-        employee.setUpdateUser(BaseContext.getCurrentId());
+//        employee.setUpdateTime(LocalDateTime.now());
+//        employee.setUpdateUser(BaseContext.getCurrentId());
         // 修改信息
         employeeMapper.update(employee);
     }
