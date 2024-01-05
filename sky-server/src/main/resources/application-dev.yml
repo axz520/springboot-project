@@ -8,6 +8,6 @@ sky:
     password: axz520
   alioss:
     endpoint: oss-cn-beijing.aliyuncs.com
-    access-key-id: LTAI5t8QdWN7DUAWU6H96Q3z
-    access-key-secret: QrzKPya2BYXjOG0upuczlAvjDpTXdB
-    bucket-name: axz-axz
+    access-key-id: id
+    access-key-secret: password
+    bucket-name: name
